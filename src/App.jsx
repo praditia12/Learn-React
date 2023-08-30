@@ -1,56 +1,26 @@
-/* eslint-disable react/prop-types */
-import {
-  IconBrandFacebook,
-  IconBrandGitlab,
-  IconBrandTiktok,
-  IconBrandTwitter,
-} from '@tabler/icons-react';
-import clsx from 'clsx';
+import Button from './components/Button';
+import Card from './components/Card';
 
-export default function App() {
-  const type = 'submit';
-  const onClick = () => console.log('Login with another style..');
-
-  return (
-    <div className={'bg-light-600 grid place-content-center min-h-screen'}>
-      <div className='flex gap-x-2'>
-        <Button type='submit'>
-          <IconBrandFacebook />
-          Register
-        </Button>
-
-        <Button {...{ type, onClick }}>
-          <IconBrandTiktok />
-          Register
-        </Button>
-
-        <Button className='bg-sky-600' onClick={() => console.log('Login')}>
-          <IconBrandTwitter />
-          Login
-        </Button>
-
-        <Button className='bg-black' type='reset'>
-          <IconBrandGitlab />
-          Login
-        </Button>
-      </div>
-    </div>
-  );
+function App() {
+    return (
+        <div className={'bg-slate-100 grid text-slate-800 tracking-thight antialiased flex items-center justify-center min-h-screen'}>
+            <div className='max-w-xl w-full'>
+                <Card>
+                    <Card.Title>Hello React</Card.Title>
+                    <Card.Body>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia unde sit dolores ratione, sunt, consectetur quaerat totam
+                        pariatur, animi fugit consequuntur possimus ipsum repellat corrupti explicabo ea deleniti nostrum soluta.
+                    </Card.Body>
+                    <Card.Footer>
+                        <Button>Register</Button>
+                    </Card.Footer>
+                </Card>
+            </div>
+        </div>
+    );
 }
 
-function Button(props) {
-  const { className = 'bg-blue-600', text, children, type = 'submit' } = props;
+// eslint-disable-next-line no-unused-vars
+const Title = () => <h1>Hello Mylife</h1>; // use style es6
 
-  return (
-    <button
-      {...props}
-      type={type}
-      className={clsx(
-        className,
-        '[&>svg]:w-5 [&>svg]:h-5 [&>svg]:stroke-1 flex items-center gap-x-2 text-white px-4 py-2 rounded',
-      )}
-    >
-      {text || children}
-    </button>
-  );
-}
+export default App;
