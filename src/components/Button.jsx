@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import clsx from 'clsx';
 
-export default function Button({ className = 'bg-blue-600', text, children, type = 'submit', ...props }) {
+export default function Button({ className = 'bg-black', text, children, type = 'submit', ...props }) {
     return (
         <button
             {...props} // by default atribut component

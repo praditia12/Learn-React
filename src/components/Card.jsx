@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 function Card({ children }) {
-    return <div className='shadow rounded-lg overflow-hidden bg-white'>{children}</div>;
+    return <div className='shadow rounded-lg overflow-hidden bg-white text-slate-900'>{children}</div>;
 }
 
 function Title({ children }) {
