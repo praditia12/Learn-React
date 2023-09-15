@@ -11,11 +11,14 @@
         "preview": "vite preview"
     },
     "dependencies": {
+        "@headlessui/react": "^1.7.17",
+        "@heroicons/react": "^2.0.18",
         "@tabler/icons": "^2.32.0",
         "@tabler/icons-react": "^2.32.0",
         "clsx": "^2.0.0",
         "react": "^18.2.0",
-        "react-dom": "^18.2.0"
+        "react-dom": "^18.2.0",
+        "react-router-dom": "^6.16.0"
     },
     "devDependencies": {
         "@tailwindcss/forms": "^0.5.6",

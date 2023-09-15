@@ -1,17 +1,22 @@
-import PlaceContentCenter from './components/PlaceContentCenter';
-import Timers from './components/Timers';
-import Card from './components/Card';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Feature from './pages/Feature';
+import Team from './pages/Team';
+import NotFound from './pages/NotFound';
+import Nav from './pages/Nav';
 
 function App() {
     return (
-        <PlaceContentCenter>
-            <Card>
-                <Card.Title>useEffect</Card.Title>
-                <Card.Body>
-                    <Timers />
-                </Card.Body>
-            </Card>
-        </PlaceContentCenter>
+        <BrowserRouter>
+            <Routes>
+                <Route path='/' element={<Nav />}>
+                    <Route index element={<Home />} />
+                    <Route path='/feature' element={<Feature />} />
+                    <Route path='/team' element={<Team />} />
+                    <Route path='*' element={<NotFound />} />
+                </Route>
+            </Routes>
+        </BrowserRouter>
     );
 }
 
